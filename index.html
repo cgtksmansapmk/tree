@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!-- Copyright (C) 2022 - 2023  rzlamrr, <https://github.com/rzlamrr.git> -->
+<html lang="id-id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00BCD4" />
+  <title>CGTK | LinkTree</title>
+
+  <meta name="description" content="Laman berisikan tautan pendaftaran dan sosial media CGTK." />
+
+  <meta itemprop="name" content="CGTK | LinkTree" />
+  <meta itemprop="description" content="Laman berisikan tautan pendaftaran dan sosial media CGTK." />
+  <meta itemprop="image" content="/assets/prvw.jpg" />
+
+  <meta property="og:title" content="CGTK | LinkTree" />
+  <meta property="og:description" content="Laman berisikan tautan pendaftaran dan sosial media CGTK." />
+  <meta property="og:site_name" content="CGTK | LinkTree" />
+  <meta property="og:url" content="https://cgtk.pages.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/prvw.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CGTK | LinkTree" />
+  <meta name="twitter:description" content="Laman berisikan tautan pendaftaran dan sosial media CGTK." />
+  <meta name="twitter:image" content="/assets/prvw.jpg" />
+
+  <link href="https://fontbit.io/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/m.css" />
+</head>
+
+<body>
+  <!-- <a href="https://github.com/cgtksmansapmk/" style="position: fixed; padding: 5px 45px; top: 50px; right: -50px; transform: rotate(45deg); box-shadow: rgb(18, 22, 33) 0px 0px 0px 3px, rgba(0, 0, 0, 0.5) 0px 0px 20px -3px; text-shadow: rgb(255, 255, 255) 0px 0px 0px, rgba(0, 0, 0, 0.3) 0px 0px 5px; background-color: rgb(18, 22, 33); color: rgb(255, 255, 255); font-size: 13px; font-family: sans-serif; text-decoration: none; font-weight: bold; border: 2px dotted rgb(255, 255, 255); backface-visibility: hidden; letter-spacing: 0.5px; z-index: 9999;">Fork me on GitHub</a> -->
+  <header>
+    <img src="/assets/cgtk.jpg" width="460" height="460" alt="CGTK" />
+    <h1>Campoes Goes To Kampoeng 2023</h1>
+    <!-- <time class="countdown" date-time="2023-01-07 18:00:00" style="--accent: red"></time> -->
+  </header>
+
+  <nav>
+    <ul>
+      <li id="gform">
+        <a href="#" class="trigger">
+          <i class="fas fa-music fa-1x"></i>
+          Jingle
+        </a>
+      </li>
+      <li id="twibbon">
+        <a href="https://twb.nz/cgtk2023" target="_blank">
+          <i class="fas fa-ribbon"></i>
+          Twibbon
+        </a>
+      </li>
+      <li id="instagram">
+        <a href="https://instagram.com/cgtksmansapmk" target="_blank">
+          <i class="fab fa-instagram"></i>
+          Instagram
+        </a>
+      </li>
+      <li id="tiktok">
+        <a href="https://www.tiktok.com/@cgtk2k23.official" target="_blank">
+          <i class="fab fa-tiktok"></i>
+          Tiktok
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="modal">
+    <!-- <div class="modal-content"> -->
+    <div class="music-container">
+
+      <div class="music-body">
+        <div class="layer">
+          <div class="volume-slider">
+            <span class="bar"></span>
+            <input type='range' min='0.01' max='1' value='1' step='0.01' class="volumerange" />
+          </div>
+        </div>
+        <div class="top-icons">
+          <button class="volume btn" id="volume">
+            <i id="volumeicon" class="fas fa-volume-up"></i>
+          </button>
+          <!-- <span class="close-button">×</span> -->
+          <button class="btn close-button" id="list">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="music-img">
+          <img src="/assets/jingle.jpg" alt="cgtk-cover"
+            id="img">
+        </div>
+        <div class="music-info">
+          <h2 id="title">CGTK JINGLE</h2>
+          <h4 id="artist">Joe Hansyah</h4>
+        </div>
+        <audio src="/assets/joe.mp3" id="audio"></audio>
+        <div class="music-progress">
+          <div class="progress-bar">
+            <span class="progress-line"></span>
+            <input type='range' min='0' max='100' value='0' class="progress" id="progress" />
+          </div>
+          <div class="duration">
+            <span class="current-time">00:00</span>
+            <span class="duration-time">00:00</span>
+          </div>
+        </div>
+        <div class="music-controls">
+          <button class="repeat btn" id="repeat">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+          <div class="main-controls">
+            <button class="prevbtn" id="prevbtn">
+              <i class="fas fa-backward"></i>
+            </button>
+            <button class="playpause" id="playpause">
+              <i id="playpause-btn" class="fas fa-play"></i>
+            </button>
+            <button class="nextbtn" id="nextbtn">
+              <i class="fas fa-forward"></i>
+            </button>
+          </div>
+          <button class="like btn" id="like">
+            <i id="likeicon" class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="songs-list" id="songs-list">
+          <button class="list-close btn" id="listclose">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      var modal = document.querySelector(".modal");
+      var trigger = document.querySelector(".trigger");
+      var closeButton = document.querySelector(".close-button");
+
+      function toggleModal() {
+        modal.classList.toggle("show-modal");
+      }
+
+      function windowOnClick(event) {
+        if (event.target === modal) {
+          toggleModal();
+        }
+      }
+
+      trigger.addEventListener("click", toggleModal);
+      closeButton.addEventListener("click", toggleModal);
+      window.addEventListener("click", windowOnClick);
+
+    </script>
+  </div>
+  <script>
+    const img = document.querySelector("#img");
+    const playPause = document.querySelector("#playpause");
+    const playPauseBtn = document.querySelector("#playpause-btn");
+    const audio = document.querySelector("#audio");
+    const title = document.querySelector("#title");
+    const prevBtn = document.querySelector("#prevbtn");
+    const nextBtn = document.querySelector("#nextbtn");
+    const progress = document.querySelector("#progress");
+    const progressBar = document.querySelector(".progress-bar");
+    const currTime = document.querySelector(".current-time");
+    const totalDuration = document.querySelector(".duration-time");
+    const volume = document.querySelector("#volume");
+    const layer = document.querySelector(".layer");
+    const volBar = document.querySelector(".bar");
+    const progressLine = document.querySelector(".progress-line");
+    const volumeRange = document.querySelector(".volumerange");
+    const repeatBtn = document.querySelector("#repeat");
+    const likeBtn = document.querySelector("#like");
+    const likeIcon = document.querySelector("#likeicon");
+    const songListBtn = document.querySelector("#list");
+    const songList = document.querySelector("#songs-list");
+    const listCloseBtn = document.querySelector("#listclose");
+    // song default state
+
+    let isPlaying = false;
+
+    // song pause function
+
+    function playSong() {
+      isPlaying = true;
+      playPauseBtn.classList.replace("fa-play", "fa-pause");
+      audio.play();
+    }
+
+    // song play function
+
+    function pauseSong() {
+      isPlaying = false;
+      playPauseBtn.classList.replace("fa-pause", "fa-play");
+      audio.pause();
+    }
+
+    // loading songs
+
+    function loadSong(song) {
+      img.src = song.cover;
+      title.textContent = song.displayName;
+      audio.src = song.path;
+    };
+
+    // progress bar function
+    console.log(audio.duration);
+
+    function updateProgress(e) {
+      if (isPlaying) {
+        const { duration, currentTime } = e.target;
+        // Update progress bar width
+        const progressPercent = (currentTime / duration) * 100;
+        progress.value = progressPercent;
+        progressLine.style.width = `${progressPercent}%`;
+        if (progressPercent == 100) {
+          return nextSong();
+        }
+        // Calculate display for duration
+        const durationMinutes = Math.floor(duration / 60);
+        let durationSeconds = Math.floor(duration % 60);
+        if (durationSeconds < 10) {
+          durationSeconds = `0${durationSeconds}`;
+        }
+        // Delay switching duration Element to avoid NaN
+        if (durationSeconds) {
+          totalDuration.textContent = `${durationMinutes}:${durationSeconds}`;
+        }
+        // Calculate display for currentTime
+        let currentMinutes = Math.floor(currentTime / 60);
+        let currentSeconds = Math.floor(currentTime % 60);
+        if (currentSeconds < 10) {
+          currentSeconds = `0${currentSeconds}`;
+        }
+        currTime.textContent = `${currentMinutes}:${currentSeconds}`;
+      }
+    }
+
+    function progressSlide(e) {
+      const { value } = e.target;
+      const progressTime = Math.ceil((audio.duration / 100) * value);
+      audio.currentTime = progressTime;
+      console.log(progressTime);
+      if (!isPlaying) {
+        progressLine.style.width = `${value}%`;
+      }
+    }
+
+    function volumeBar() {
+      layer.classList.toggle('hide');
+      setTimeout(() => {
+        if (layer.classList.contains("hide")) {
+          layer.classList.remove("hide");
+        }
+      }, 5000);
+    }
+
+    function setVolume() {
+      audio.volume = volumeRange.value;
+      const barWidth = (volumeRange.value / 1) * 100;
+      volBar.style.width = `${barWidth}%`;
+    }
+
+    function repeat() {
+      repeatBtn.classList.toggle('color');
+      const repeatBtnState = repeatBtn.classList.contains("color");
+      if (repeatBtnState) {
+        audio.loop = true;
+        loadSong();
+      } else {
+        audio.loop = false;
+        loadSong();
+      }
+
+    }
+
+    function like() {
+      if (likeBtn.classList.toggle('color')) {
+        likeIcon.classList.replace('far', 'fas');
+      } else {
+        likeIcon.classList.replace('fas', 'far');
+      }
+    }
+
+    playPause.addEventListener("click", () => (isPlaying ? pauseSong() : playSong()));
+    audio.addEventListener("timeupdate", updateProgress);
+    progress.addEventListener("input", progressSlide);
+    volume.addEventListener("click", volumeBar);
+    volumeRange.addEventListener("input", setVolume);
+    repeatBtn.addEventListener("click", repeat);
+    likeBtn.addEventListener("click", like);
+  </script>
+  </div>
+</body>
+<footer>
+  <div id="footertext">© <a href="https://github.com/cgtksmansapmk" target="_blank">cgtksmansapmk</a>. by <a href="https://rzlamrr.my.id/" target="_blank">rzlamrr</a>.</div>
+</footer>
+
+</html>
